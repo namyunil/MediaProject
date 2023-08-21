@@ -36,8 +36,8 @@
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="w6P-Q3-6kg">
                                 <rect key="frame" x="0.0" y="0.0" width="427" height="375.33333333333331"/>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aXQ-Ty-jOQ">
-                                <rect key="frame" x="18.000000000000004" y="383.33333333333331" width="41.333333333333343" height="20.333333333333314"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="751" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aXQ-Ty-jOQ">
+                                <rect key="frame" x="18" y="383.33333333333331" width="341.66666666666669" height="20.333333333333314"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -97,10 +97,17 @@
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" image="paperclip.circle.fill" catalog="system"/>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="252" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Wfa-mB-oXR">
+                                <rect key="frame" x="367.66666666666669" y="383.33333333333331" width="41.333333333333314" height="20.333333333333314"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="atU-IH-qAM" secondAttribute="trailing" constant="18" id="0sK-8f-6oQ"/>
+                            <constraint firstAttribute="trailing" secondItem="Wfa-mB-oXR" secondAttribute="trailing" constant="18" id="3jV-og-dgG"/>
                             <constraint firstItem="aXQ-Ty-jOQ" firstAttribute="top" secondItem="JKb-RA-qIS" secondAttribute="bottom" constant="18" id="5Fe-vG-QLF"/>
                             <constraint firstAttribute="trailing" secondItem="w6P-Q3-6kg" secondAttribute="trailing" id="6Cj-Vs-SCq"/>
                             <constraint firstAttribute="bottom" secondItem="w6P-Q3-6kg" secondAttribute="bottom" constant="130" id="9Ai-T3-hH0"/>
@@ -112,6 +119,7 @@
                             <constraint firstAttribute="trailing" secondItem="404-xp-QLe" secondAttribute="trailing" constant="18" id="KgB-7X-j4t"/>
                             <constraint firstItem="0VQ-jP-dnl" firstAttribute="leading" secondItem="xfw-L2-cIK" secondAttribute="leading" constant="18" id="QUH-98-5kr"/>
                             <constraint firstItem="JKb-RA-qIS" firstAttribute="leading" secondItem="xfw-L2-cIK" secondAttribute="leading" constant="18" id="QYj-VK-FGi"/>
+                            <constraint firstItem="Wfa-mB-oXR" firstAttribute="top" secondItem="w6P-Q3-6kg" secondAttribute="bottom" constant="8" id="U7T-wU-I21"/>
                             <constraint firstItem="404-xp-QLe" firstAttribute="leading" secondItem="xfw-L2-cIK" secondAttribute="leading" constant="18" id="URy-oy-DpO"/>
                             <constraint firstItem="aXQ-Ty-jOQ" firstAttribute="leading" secondItem="xfw-L2-cIK" secondAttribute="leading" constant="18" id="Xnq-F6-cSr"/>
                             <constraint firstItem="0VQ-jP-dnl" firstAttribute="top" secondItem="aXQ-Ty-jOQ" secondAttribute="bottom" constant="8" id="b6R-BH-ty5"/>
@@ -119,6 +127,7 @@
                             <constraint firstItem="w6P-Q3-6kg" firstAttribute="top" secondItem="xfw-L2-cIK" secondAttribute="top" id="idT-rC-ODd"/>
                             <constraint firstAttribute="bottom" secondItem="KlZ-TU-cVq" secondAttribute="bottom" constant="8" id="nJA-1K-xPp"/>
                             <constraint firstItem="aXQ-Ty-jOQ" firstAttribute="top" secondItem="w6P-Q3-6kg" secondAttribute="bottom" constant="8" id="oo9-8m-fiB"/>
+                            <constraint firstItem="Wfa-mB-oXR" firstAttribute="leading" secondItem="aXQ-Ty-jOQ" secondAttribute="trailing" constant="8" id="rPd-dk-yeu"/>
                             <constraint firstItem="KlZ-TU-cVq" firstAttribute="top" secondItem="404-xp-QLe" secondAttribute="bottom" constant="8" id="tUS-PE-36t"/>
                             <constraint firstAttribute="bottom" secondItem="abq-OY-c1m" secondAttribute="bottom" constant="8" id="tX9-fC-eO5"/>
                         </constraints>
@@ -144,6 +153,7 @@
                 <outlet property="detailButton" destination="abq-OY-c1m" id="Mad-go-a0T"/>
                 <outlet property="genreLabel" destination="Iem-hQ-kph" id="Rsl-yh-VIB"/>
                 <outlet property="moviePosterView" destination="xfw-L2-cIK" id="t1T-Jp-axJ"/>
+                <outlet property="originalTitleLabel" destination="Wfa-mB-oXR" id="Ynv-eu-9N2"/>
                 <outlet property="posterImageView" destination="w6P-Q3-6kg" id="0I5-nt-OqF"/>
                 <outlet property="ratingLabel" destination="mDY-j8-3kX" id="n3d-za-eqn"/>
                 <outlet property="titleLabel" destination="aXQ-Ty-jOQ" id="RrZ-qA-jJt"/>

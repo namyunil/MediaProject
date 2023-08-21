@@ -18,5 +18,6 @@ class TrendingCollectionViewCell: UICollectionViewCell {
     @IBOutlet var detailButton: UIButton!
     @IBOutlet var moviePosterView: UIView!
     
+    @IBOutlet var originalTitleLabel: UILabel!
     @IBOutlet var clipButton: UIButton!
 }

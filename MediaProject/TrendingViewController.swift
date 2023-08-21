@@ -13,6 +13,7 @@ import Kingfisher
 struct Movie {
     var date: String
     var title: String
+    var originalTitle: String
     var image: String
     var overview: String
     var ratings: Double
@@ -84,6 +85,7 @@ class TrendingViewController: UIViewController {
                 for items in json["results"].arrayValue {
                     let date = items["release_date"].stringValue
                     let title = items["title"].stringValue
+                    let originalTitle = items["original_title"].stringValue
                     let image = "https://image.tmdb.org/t/p/original" + items["backdrop_path"].stringValue
                     let overview = items["overview"].stringValue
                     let ratings = items["vote_average"].doubleValue
@@ -93,7 +95,7 @@ class TrendingViewController: UIViewController {
                     let genre = self.genre[genreID]!
                     
                     
-                    let data = Movie(date: date, title: title, image: image, overview: overview, ratings: ratings, id: id, poster: poster, genre: genre)
+                    let data = Movie(date: date, title: title, originalTitle: originalTitle, image: image, overview: overview, ratings: ratings, id: id, poster: poster, genre: genre)
                     
                     self.movieList.append(data)
                     
@@ -140,7 +142,12 @@ extension TrendingViewController: UICollectionViewDelegate, UICollectionViewData
         let row = movieList[indexPath.item]
         
         cell.titleLabel.text = row.title
-        cell.titleLabel.font = .boldSystemFont(ofSize: 15)
+        cell.titleLabel.font = .boldSystemFont(ofSize: 14)
+        
+        
+        cell.originalTitleLabel.text = row.originalTitle
+        cell.originalTitleLabel.font = .boldSystemFont(ofSize: 14)
+        
         
         cell.ratingLabel.text = String(format: "%.2f", row.ratings)
         cell.dateLabel.text = row.date
