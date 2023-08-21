@@ -79,13 +79,13 @@
                                             <rect key="frame" x="0.0" y="0.0" width="393" height="208"/>
                                         </imageView>
                                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Oip-Rn-CFj">
-                                            <rect key="frame" x="18" y="57" width="180" height="143"/>
+                                            <rect key="frame" x="8" y="57" width="120" height="143"/>
                                             <constraints>
-                                                <constraint firstAttribute="width" constant="180" id="AJ1-yZ-liL"/>
+                                                <constraint firstAttribute="width" constant="120" id="AJ1-yZ-liL"/>
                                             </constraints>
                                         </imageView>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pQp-LA-dkJ">
-                                            <rect key="frame" x="8" y="18" width="42" height="21"/>
+                                            <rect key="frame" x="18" y="18" width="42" height="21"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
@@ -98,8 +98,8 @@
                                         <constraint firstAttribute="bottom" secondItem="8Ov-Pm-r0p" secondAttribute="bottom" id="Sx4-eC-EfP"/>
                                         <constraint firstItem="8Ov-Pm-r0p" firstAttribute="top" secondItem="hIm-rL-fvT" secondAttribute="top" id="T7u-2a-bC2"/>
                                         <constraint firstItem="Oip-Rn-CFj" firstAttribute="top" secondItem="pQp-LA-dkJ" secondAttribute="bottom" constant="18" id="anY-1b-dVM"/>
-                                        <constraint firstItem="pQp-LA-dkJ" firstAttribute="leading" secondItem="hIm-rL-fvT" secondAttribute="leading" constant="8" id="b5i-Vs-qPB"/>
-                                        <constraint firstItem="Oip-Rn-CFj" firstAttribute="leading" secondItem="hIm-rL-fvT" secondAttribute="leading" constant="18" id="d6e-a2-eZG"/>
+                                        <constraint firstItem="pQp-LA-dkJ" firstAttribute="leading" secondItem="hIm-rL-fvT" secondAttribute="leading" constant="18" id="b5i-Vs-qPB"/>
+                                        <constraint firstItem="Oip-Rn-CFj" firstAttribute="leading" secondItem="hIm-rL-fvT" secondAttribute="leading" constant="8" id="d6e-a2-eZG"/>
                                         <constraint firstItem="8Ov-Pm-r0p" firstAttribute="leading" secondItem="hIm-rL-fvT" secondAttribute="leading" id="f7r-Wg-KTU"/>
                                         <constraint firstItem="pQp-LA-dkJ" firstAttribute="top" secondItem="hIm-rL-fvT" secondAttribute="top" constant="18" id="fTQ-aI-u5c"/>
                                     </constraints>

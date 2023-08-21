@@ -19,13 +19,6 @@ struct Movie {
     var id: Int
     var poster: String
     var genre: String
-    var actorName : [String]
-}
-
-struct Actor {
-    var name: String
-    var character: String
-    var image: String
 }
 
 
@@ -35,7 +28,6 @@ class TrendingViewController: UIViewController {
     
     var movieList: [Movie] = []
     var actorList: [Actor] = []
-    var actornm: [String] = []
     
     var genre: [Int : String] = [
         28: "Action",
@@ -82,72 +74,6 @@ class TrendingViewController: UIViewController {
         let url =  "https://api.themoviedb.org/3/trending/movie/day?language=ko-kr"
         let header: HTTPHeaders = ["Authorization": APIKey.Token]
         
-        DispatchQueue.global().async {
-            AF.request(url, method: .get, headers: header).validate().responseJSON { response in
-                switch response.result {
-                case .success(let value):
-                    let json = JSON(value)
-                    //                print("JSON: \(json)")
-                    
-                    for items in json["results"].arrayValue {
-                        let date = items["release_date"].stringValue
-                        let title = items["title"].stringValue
-                        let image = "https://image.tmdb.org/t/p/original" + items["backdrop_path"].stringValue
-                        let overview = items["overview"].stringValue
-                        let ratings = items["vote_average"].doubleValue
-                        let poster = items["poster_path"].stringValue
-                        let id = items["id"].intValue
-                        let genreID = items["genre_ids"][0].intValue
-                        let genre = self.genre[genreID]!
-                        
-                        let url = "https://api.themoviedb.org/3/movie/\(id)/credits?language=ko-kr"
-                        
-                        
-                            AF.request(url, method: .get, headers: header).validate().responseJSON { response in
-                                switch response.result {
-                                case .success(let value):
-                                    let json = JSON(value)
-                                    //                                            print("JSON: \(json)")
-                                    
-                                    for items in json["cast"].arrayValue {
-                                        let actor = items["name"].stringValue
-                                        
-                                        
-                                        self.actornm.append(actor)
-                                        print("==1==")
-                                        print(self.actornm)
-                                    }
-                                    
-                                    
-                                case .failure(let error):
-                                    print(error)
-                                }
-                            }
-                            
-                      
-                        DispatchQueue.main.async {
-                            let data = Movie(date: date, title: title, image: image, overview: overview, ratings: ratings, id: id, poster: poster, genre: genre, actorName: self.actornm)
-                            
-                            self.movieList.append(data)
-                            print("==2==")
-                            print(data)
-                            self.movieCollectionView.reloadData()
-                        }
-                        
-                    }
-                    
-                    
-                case .failure(let error):
-                    print(error)
-                }
-            }
-        }
-    }
-    
-    func callCreditRequest(id: Int) {
-        
-        let url = "https://api.themoviedb.org/3/movie/\(id)/credits?language=ko-kr"
-        let header: HTTPHeaders = ["Authorization": APIKey.Token]
         
         AF.request(url, method: .get, headers: header).validate().responseJSON { response in
             switch response.result {
@@ -155,18 +81,29 @@ class TrendingViewController: UIViewController {
                 let json = JSON(value)
                 //                print("JSON: \(json)")
                 
-                for items in json["cast"].arrayValue {
-                    let name = items["name"].stringValue
-                    let character = items["character"].stringValue
-                    let image = "https://image.tmdb.org/t/p/original" + items["profile_path"].stringValue
+                for items in json["results"].arrayValue {
+                    let date = items["release_date"].stringValue
+                    let title = items["title"].stringValue
+                    let image = "https://image.tmdb.org/t/p/original" + items["backdrop_path"].stringValue
+                    let overview = items["overview"].stringValue
+                    let ratings = items["vote_average"].doubleValue
+                    let poster = "https://image.tmdb.org/t/p/original" + items["poster_path"].stringValue
+                    let id = items["id"].intValue
+                    let genreID = items["genre_ids"][0].intValue
+                    let genre = self.genre[genreID]!
                     
-                    self.actornm.append(name)
                     
-                    let actorData = Actor(name: name, character: character, image: image)
-                    self.actorList.append(actorData)
+                    let data = Movie(date: date, title: title, image: image, overview: overview, ratings: ratings, id: id, poster: poster, genre: genre)
+                    
+                    self.movieList.append(data)
+                    
+                    print(data)
                     self.movieCollectionView.reloadData()
                     
+                    
+                    
                 }
+                
                 
             case .failure(let error):
                 print(error)
@@ -178,6 +115,7 @@ class TrendingViewController: UIViewController {
 }
 
 extension TrendingViewController: UICollectionViewDelegate, UICollectionViewDataSource {
+    
     
     func setCollectionViewLayout() {
         
@@ -207,23 +145,26 @@ extension TrendingViewController: UICollectionViewDelegate, UICollectionViewData
         cell.ratingLabel.text = String(format: "%.2f", row.ratings)
         cell.dateLabel.text = row.date
         cell.posterImageView.kf.setImage(with: URL(string: row.image))
+        cell.posterImageView.layer.cornerRadius = 10
+        cell.posterImageView.clipsToBounds = true
+        
         cell.genreLabel.text = "#\(row.genre)"
         cell.ratingLabel.backgroundColor = .white
         
         
-        print(row.actorName)
+        cell.moviePosterView.layer.cornerRadius = 20
+        cell.moviePosterView.layer.shadowColor = UIColor.black.cgColor
+        cell.moviePosterView.layer.shadowOffset = CGSize(width: 0, height: 0)
+        cell.moviePosterView.layer.shadowRadius = 10
+        cell.moviePosterView.layer.shadowOpacity = 0.50
+        cell.moviePosterView.backgroundColor = .clear
+        
         
         //actor label text에 알맞은 데이터 넣기..!
         //담은 데이터를 어떻게 활용해 하는가..!
         // 1. dispatchque 활용 / 2. 메서드 내에 메서드를 호출하는 방식
-//        print(row.actorName)
+        //        print(row.actorName)
         
-        
-        
-        
-        
-        cell.moviePosterView.layer.cornerRadius = 10
-        cell.moviePosterView.layer.borderColor = UIColor.black.cgColor
         
         
         return cell
@@ -240,19 +181,15 @@ extension TrendingViewController: UICollectionViewDelegate, UICollectionViewData
         vc.poster = row.poster
         vc.backImage = row.image
         
+        vc.id = row.id
         
-        
-        callCreditRequest(id: row.id)
-        
-        DispatchQueue.main.async {
-            vc.actorData = self.actorList
-        }
+
         
         let nav = UINavigationController(rootViewController: vc)
         
         navigationController?.pushViewController(vc, animated: true)
         
+        
     }
-    
     
 }
