@@ -52,19 +52,31 @@ class TrendingViewController: UIViewController {
         37: "Western"
     ]
     
+//    lazy var collectionView = {
+//        let view = UICollectionView()
+//        view.dataSource = self
+//        view.delegate = self
+//
+//        let nib = UINib(nibName: "TrendingCollectionViewCell", bundle: nil)
+//        view.register(nib, forCellWithReuseIdentifier: "TrendingCollectionViewCell")
+//        return view
+//    }()
+   
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
+//        view.addSubview(collectionView)
         movieCollectionView.dataSource = self
         movieCollectionView.delegate = self
-        
+
+        let nib = UINib(nibName: "TrendingCollectionViewCell", bundle: nil)
+        movieCollectionView.register(nib, forCellWithReuseIdentifier: "TrendingCollectionViewCell")
         setCollectionViewLayout()
         
         callRequest()
         
         
-        let nib = UINib(nibName: "TrendingCollectionViewCell", bundle: nil)
-        movieCollectionView.register(nib, forCellWithReuseIdentifier: "TrendingCollectionViewCell")
         
     }
     
@@ -117,6 +129,7 @@ class TrendingViewController: UIViewController {
 }
 
 extension TrendingViewController: UICollectionViewDelegate, UICollectionViewDataSource {
+    
     
     
     func setCollectionViewLayout() {

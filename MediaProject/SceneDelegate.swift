@@ -13,11 +13,39 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
 
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
-        // Use this method to optionally configure and attach the UIWindow `window` to the provided UIWindowScene `scene`.
-        // If using a storyboard, the `window` property will automatically be initialized and attached to the scene.
-        // This delegate does not imply the connecting scene or session are new (see `application:configurationForConnectingSceneSession` instead).
-        guard let _ = (scene as? UIWindowScene) else { return }
+       
+        
+        guard let scene = (scene as? UIWindowScene) else { return }
+        window = UIWindow(windowScene: scene)
+        
+        
+        UserDefaults.standard.set(false, forKey: "isLaunched")
+        
+        
+        let isLaunched = UserDefaults.standard.bool(forKey: "isLaunched")
+        print(isLaunched)
+        
+        
+        
+        if isLaunched == false {
+            let vc = OnboardingViewController()
+            window?.rootViewController = vc
+            
+            
+        } else {
+            //userDefaults의 값은 확인 버튼 클릭시 변경하나, 재실행시 TrendingViewController를 띄우지 못함
+            //확인 버튼 클릭시 -> TrendingViewController로 페이지 전환 어떻게 해야하는가..?
+            
+            let sb = UIStoryboard(name: "Main", bundle: nil)
+            let vc = sb.instantiateViewController(withIdentifier: "TrendingViewController") as! TrendingViewController
+            let nav = UINavigationController(rootViewController: vc)
+            
+            window?.rootViewController = nav
+        }
+        
+        window?.makeKeyAndVisible()
     }
+    
 
     func sceneDidDisconnect(_ scene: UIScene) {
         // Called as the scene is being released by the system.
