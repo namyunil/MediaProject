@@ -59,6 +59,7 @@ class TrendingViewController: UIViewController {
 //
 //        let nib = UINib(nibName: "TrendingCollectionViewCell", bundle: nil)
 //        view.register(nib, forCellWithReuseIdentifier: "TrendingCollectionViewCell")
+//
 //        return view
 //    }()
    
