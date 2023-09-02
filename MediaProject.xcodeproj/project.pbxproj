@@ -9,6 +9,14 @@
 /* Begin PBXBuildFile section */
 		9F0372E52A8CE7E100B2B967 /* DetailTrendingTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F0372E32A8CE7E100B2B967 /* DetailTrendingTableViewCell.swift */; };
 		9F0372E62A8CE7E100B2B967 /* DetailTrendingTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9F0372E42A8CE7E100B2B967 /* DetailTrendingTableViewCell.xib */; };
+		9F4A694B2AA3962D00D8ED20 /* NickNameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F4A694A2AA3962D00D8ED20 /* NickNameViewController.swift */; };
+		9F4A694D2AA39BF800D8ED20 /* AgeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F4A694C2AA39BF800D8ED20 /* AgeViewController.swift */; };
+		9F4A694F2AA3A8D600D8ED20 /* IntroduceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F4A694E2AA3A8D600D8ED20 /* IntroduceViewController.swift */; };
+		9F4A69532AA3ADE200D8ED20 /* LinkViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F4A69522AA3ADE200D8ED20 /* LinkViewController.swift */; };
+		9F4A69552AA3AEB700D8ED20 /* GenderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F4A69542AA3AEB700D8ED20 /* GenderViewController.swift */; };
+		9F57CE3C2A9DE4B500A7B074 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F57CE3B2A9DE4B500A7B074 /* ProfileViewController.swift */; };
+		9F57CE412A9DEC9D00A7B074 /* ProfileTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F57CE402A9DEC9D00A7B074 /* ProfileTableViewCell.swift */; };
+		9F57CE472A9EB96400A7B074 /* NameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F57CE462A9EB96400A7B074 /* NameViewController.swift */; };
 		9FB18A762A8B26F100ED41AF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FB18A752A8B26F100ED41AF /* AppDelegate.swift */; };
 		9FB18A782A8B26F100ED41AF /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FB18A772A8B26F100ED41AF /* SceneDelegate.swift */; };
 		9FB18A7D2A8B26F100ED41AF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9FB18A7B2A8B26F100ED41AF /* Main.storyboard */; };
@@ -30,6 +38,14 @@
 /* Begin PBXFileReference section */
 		9F0372E32A8CE7E100B2B967 /* DetailTrendingTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailTrendingTableViewCell.swift; sourceTree = "<group>"; };
 		9F0372E42A8CE7E100B2B967 /* DetailTrendingTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DetailTrendingTableViewCell.xib; sourceTree = "<group>"; };
+		9F4A694A2AA3962D00D8ED20 /* NickNameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NickNameViewController.swift; sourceTree = "<group>"; };
+		9F4A694C2AA39BF800D8ED20 /* AgeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AgeViewController.swift; sourceTree = "<group>"; };
+		9F4A694E2AA3A8D600D8ED20 /* IntroduceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntroduceViewController.swift; sourceTree = "<group>"; };
+		9F4A69522AA3ADE200D8ED20 /* LinkViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LinkViewController.swift; sourceTree = "<group>"; };
+		9F4A69542AA3AEB700D8ED20 /* GenderViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenderViewController.swift; sourceTree = "<group>"; };
+		9F57CE3B2A9DE4B500A7B074 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		9F57CE402A9DEC9D00A7B074 /* ProfileTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileTableViewCell.swift; sourceTree = "<group>"; };
+		9F57CE462A9EB96400A7B074 /* NameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NameViewController.swift; sourceTree = "<group>"; };
 		9FB18A722A8B26F100ED41AF /* MediaProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MediaProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9FB18A752A8B26F100ED41AF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9FB18A772A8B26F100ED41AF /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -61,6 +77,28 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		9F4A69492AA3892800D8ED20 /* New Group */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "New Group";
+			sourceTree = "<group>";
+		};
+		9F57CE482A9EB96800A7B074 /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+				9F57CE402A9DEC9D00A7B074 /* ProfileTableViewCell.swift */,
+				9F57CE3B2A9DE4B500A7B074 /* ProfileViewController.swift */,
+				9F57CE462A9EB96400A7B074 /* NameViewController.swift */,
+				9F4A694A2AA3962D00D8ED20 /* NickNameViewController.swift */,
+				9F4A694C2AA39BF800D8ED20 /* AgeViewController.swift */,
+				9F4A694E2AA3A8D600D8ED20 /* IntroduceViewController.swift */,
+				9F4A69522AA3ADE200D8ED20 /* LinkViewController.swift */,
+				9F4A69542AA3AEB700D8ED20 /* GenderViewController.swift */,
+			);
+			path = Profile;
+			sourceTree = "<group>";
+		};
 		9FB18A692A8B26F100ED41AF = {
 			isa = PBXGroup;
 			children = (
@@ -92,6 +130,8 @@
 				9F0372E42A8CE7E100B2B967 /* DetailTrendingTableViewCell.xib */,
 				9FB18A9A2A8BE91200ED41AF /* TrendingCollectionViewCell.swift */,
 				9FB18A9B2A8BE91200ED41AF /* TrendingCollectionViewCell.xib */,
+				9F4A69492AA3892800D8ED20 /* New Group */,
+				9F57CE482A9EB96800A7B074 /* Profile */,
 				9FB18A7E2A8B26F400ED41AF /* Assets.xcassets */,
 				9FB18A802A8B26F400ED41AF /* LaunchScreen.storyboard */,
 				9FB18A832A8B26F400ED41AF /* Info.plist */,
@@ -187,10 +227,18 @@
 			files = (
 				9FB18A762A8B26F100ED41AF /* AppDelegate.swift in Sources */,
 				9FB18A9C2A8BE91200ED41AF /* TrendingCollectionViewCell.swift in Sources */,
+				9F4A69532AA3ADE200D8ED20 /* LinkViewController.swift in Sources */,
 				9F0372E52A8CE7E100B2B967 /* DetailTrendingTableViewCell.swift in Sources */,
+				9F4A694D2AA39BF800D8ED20 /* AgeViewController.swift in Sources */,
+				9F57CE412A9DEC9D00A7B074 /* ProfileTableViewCell.swift in Sources */,
+				9F4A694B2AA3962D00D8ED20 /* NickNameViewController.swift in Sources */,
 				9FCC9AAF2A9BC76B008FAB49 /* OnboardingViewController.swift in Sources */,
 				9FB18AB32A8CD1EE00ED41AF /* DetailTrendingViewController.swift in Sources */,
+				9F4A69552AA3AEB700D8ED20 /* GenderViewController.swift in Sources */,
+				9F4A694F2AA3A8D600D8ED20 /* IntroduceViewController.swift in Sources */,
+				9F57CE472A9EB96400A7B074 /* NameViewController.swift in Sources */,
 				9FB18A782A8B26F100ED41AF /* SceneDelegate.swift in Sources */,
+				9F57CE3C2A9DE4B500A7B074 /* ProfileViewController.swift in Sources */,
 				9FB18A972A8BD93100ED41AF /* APIKey.swift in Sources */,
 				9FB18A902A8BD71F00ED41AF /* TrendingViewController.swift in Sources */,
 			);
