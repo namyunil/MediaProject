@@ -16,9 +16,9 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
        
 
         guard let scene = (scene as? UIWindowScene) else { return }
-        window = UIWindow(windowScene: scene)
-        window?.rootViewController = UINavigationController(rootViewController: ProfileViewController())
-        window?.makeKeyAndVisible()
+//        window = UIWindow(windowScene: scene)
+//        window?.rootViewController = UINavigationController(rootViewController: TrendingViewController())
+//        window?.makeKeyAndVisible()
 
 ////        UserDefaults.standard.set(false, forKey: "isLaunched")
 //

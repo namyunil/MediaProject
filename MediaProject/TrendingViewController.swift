@@ -77,10 +77,15 @@ class TrendingViewController: UIViewController {
         
         callRequest()
         
+        navigationItem.leftBarButtonItem = UIBarButtonItem(image: UIImage(systemName: "person.circle.fill"), style: .plain, target: self, action: #selector(profileButtonClicked))
         
         
     }
     
+    @objc func profileButtonClicked() {
+        let vc = ProfileViewController()
+        navigationController?.pushViewController(vc, animated: true)
+    }
     
     func callRequest() {
         
@@ -133,7 +138,7 @@ extension TrendingViewController: UICollectionViewDelegate, UICollectionViewData
     
     
     
-    func setCollectionViewLayout() {
+    private func setCollectionViewLayout() {
         
         let layout = UICollectionViewFlowLayout()
         let spacing: CGFloat = 8

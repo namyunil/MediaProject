@@ -77,11 +77,11 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		9F4A69492AA3892800D8ED20 /* New Group */ = {
+		9F4A69492AA3892800D8ED20 /* Base */ = {
 			isa = PBXGroup;
 			children = (
 			);
-			path = "New Group";
+			path = Base;
 			sourceTree = "<group>";
 		};
 		9F57CE482A9EB96800A7B074 /* Profile */ = {
@@ -130,7 +130,7 @@
 				9F0372E42A8CE7E100B2B967 /* DetailTrendingTableViewCell.xib */,
 				9FB18A9A2A8BE91200ED41AF /* TrendingCollectionViewCell.swift */,
 				9FB18A9B2A8BE91200ED41AF /* TrendingCollectionViewCell.xib */,
-				9F4A69492AA3892800D8ED20 /* New Group */,
+				9F4A69492AA3892800D8ED20 /* Base */,
 				9F57CE482A9EB96800A7B074 /* Profile */,
 				9FB18A7E2A8B26F400ED41AF /* Assets.xcassets */,
 				9FB18A802A8B26F400ED41AF /* LaunchScreen.storyboard */,
